@@ -55,7 +55,7 @@ content_text_to_gpt = st.sidebar.text_input("書かせたい内容を入力し�
 content_kind_of_to_gpt = st.sidebar.selectbox("文章の種類", options=content_kind_of)
 
 # 出力文字数
-content_maxStr_to_gpt = str(st.sidebar.slider("記事の最大文字数", 100,1000,3000))
+content_maxStr_to_gpt = str(st.sidebar.slider("記事の最大文字数", 100,3000,1000))
 
 output_content_text = run_gpt(content_text_to_gpt, content_kind_of_to_gpt, content_maxStr_to_gpt)
 st.write(output_content_text)
